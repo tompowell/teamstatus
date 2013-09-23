@@ -1,8 +1,9 @@
 Teamstatus::Application.routes.draw do
+  devise_for :users
   root 'static_pages#home'
   get "users/new"
 
-  match '/signup',  to: 'users#new',            via: 'get'
+  match '/signup',  to: 'users#sign_up',            via: 'get'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
