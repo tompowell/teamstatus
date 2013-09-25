@@ -1,6 +1,6 @@
 Teamstatus::Application.routes.draw do
   devise_for :users
-  root 'static_pages#home'
+  root :to => 'static_pages#home'
   get "users/new"
 
   match '/signup',  to: 'users#sign_up',            via: 'get'
