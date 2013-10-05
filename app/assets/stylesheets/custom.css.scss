@@ -1,5 +1,11 @@
 @import "bootstrap";
 
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 html {
   overflow-y: scroll;
 }
@@ -46,13 +52,20 @@ p {
 }
 
 .homebullets li {
-	background-image: url('checkmark.jpg');
+/*	background-image: url('checkmark.jpg');
 	background-repeat: no-repeat;
-	text-indent:70px;
+	text-indent:70px; */
 	text-align: middle;
-	line-height: 210%;
+	line-height: 100%;
 	font-size: 1.5em;
+	margin: 10px; 
+	clear: both;
 }
+
+.homebullets i {
+
+}
+
 
 .moreinfohome {
 	margin: 20px;
@@ -74,4 +87,14 @@ p {
 .footer {
 	margin: 10px;
 	float: right;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
 }
